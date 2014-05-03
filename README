@@ -1,0 +1,3 @@
+Cython files allowing acces to the optimized BLAS routines available in scipy.linalg. Currently experimental.
+
+Licensed under the 3-clause BSD license.
