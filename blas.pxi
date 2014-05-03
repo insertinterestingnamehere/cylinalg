@@ -8,6 +8,7 @@ from numpy cimport complex128_t as z
 cdef extern from "f2pyptr.h":
     void *f2py_ptr(object) except NULL
 
+# Single precision complex routines:
 ctypedef int caxpy_t(int *n, c *ca, c *cx, int *incx, c *cy, int *incy)
 cdef caxpy_t *caxpy = <caxpy_t*>f2py_ptr(blas.caxpy._cpointer)
 
@@ -72,7 +73,7 @@ ctypedef int ctrmv_t(char *uplo, char *trans, char *diag, int *n, c *a, int *lda
 cdef ctrmv_t *ctrmv = <ctrmv_t*>f2py_ptr(blas.ctrmv._cpointer)
 
 
-
+# Double precision routines:
 ctypedef int dasum_t(int *n, d *dx, int *incx)
 cdef dasum_t *dasum = <dasum_t*>f2py_ptr(blas.dasum._cpointer)
 
@@ -137,7 +138,7 @@ ctypedef d dznrm2_t(int *n, z *x, int *incx)
 cdef dznrm2_t *dznrm2 = <dznrm2_t*>f2py_ptr(blas.dznrm2._cpointer)
 
 
-
+# Argmax routines for each type:
 ctypedef int icamax_t(int *n, c *cx, int *incx)
 cdef icamax_t *icamax = <icamax_t*>f2py_ptr(blas.icamax._cpointer)
 
@@ -151,7 +152,7 @@ ctypedef int izamax_t(int *n, z *zx, int *incx)
 cdef izamax_t *izamax = <izamax_t*>f2py_ptr(blas.izamax._cpointer)
 
 
-
+# Single precision routines:
 ctypedef int sasum_t(int *n, s *sx, int *incx)
 cdef sasum_t *sasum = <sasum_t*>f2py_ptr(blas.sasum._cpointer)
 
@@ -216,7 +217,7 @@ ctypedef int strmv_t(char *uplo, char *trans, char *diag, int *n, s *a, int *lda
 cdef strmv_t *strmv = <strmv_t*>f2py_ptr(blas.strmv._cpointer)
 
 
-
+# Double precision complex routines:
 ctypedef int zaxpy_t(int *n, z *za, z *zx, int *incx, z *zy, int *incy)
 cdef zaxpy_t *zaxpy = <zaxpy_t*>f2py_ptr(blas.zaxpy._cpointer)
 
