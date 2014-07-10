@@ -1,8 +1,8 @@
 import scipy.linalg.blas as blas
-from numpy cimport float32_t as s
-from numpy cimport float64_t as d
-from numpy cimport complex64_t as c
-from numpy cimport complex128_t as z
+ctypedef float s
+ctypedef double d
+ctypedef float complex c
+ctypedef double complex z
 # Since Scipy >= 0.12.0
 
 cdef extern from "f2pyptr.h":

@@ -6,7 +6,7 @@ from numpy import get_include
 ext_modules = [Extension(# Module name:
                          "test",
                          # Cython source files:
-                         ["test_dgemm.pyx", "blas.pxi"])]
+                         ["test_dgemm.pyx", "blas.pxd", "blas.pyx"])]
 
 # Build the extension.
 setup(name = 'test',
