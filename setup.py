@@ -4,9 +4,9 @@ from Cython.Distutils import build_ext
 from numpy import get_include
 
 ext_modules = [Extension(# Module name:
-                         "test",
+                         "test_dgemm",
                          # Cython source files:
-                         ["test_dgemm.pyx", "blas.pxd", "blas.pyx"])]
+                         ["test_dgemm.pyx"])]
 
 # Build the extension.
 setup(name = 'test',

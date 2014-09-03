@@ -1,9 +1,8 @@
-cimport blas
-from blas cimport ExtractBLAS
-from blas import ExtractBLAS
+cimport scipy_blas
 import scipy.linalg.blas
-myblas = ExtractBLAS(scipy.linalg.blas)
 import numpy as np
+
+cdef scipy_blas.blas_t blas = scipy_blas.getblas(scipy.linalg.blas)
 
 def myfunc():
     cdef double[::1,:] a, b, c
@@ -22,6 +21,6 @@ def myfunc():
     m = 2
     n = 2
     k = 2
-    myblas.dgemm("N", "N", &m, &n, &k, &alpha, &a[0,0], &lda, &b[0,0], &ldb, &beta, &c[0,0], &ldc)
+    blas.dgemm("N", "N", &m, &n, &k, &alpha, &a[0,0], &lda, &b[0,0], &ldb, &beta, &c[0,0], &ldc)
     print(np.asarray(c))
     print(np.dot(a, b))
