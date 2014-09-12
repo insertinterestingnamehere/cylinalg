@@ -237,14 +237,6 @@ cdef:
     dgetrs_t *dgetrs
     # cdef *dgges_t
     dggev_t *dggev
-    dhbevd_t *dhbevd
-    dhbevx_t *dhbevx
-    dheev_t *dheev
-    dheevd_t *dheevd
-    dheevr_t *dheevr
-    dhegv_t *dhegv
-    dhegvd_t *dhegvd
-    dhegvx_t *dhegvx
     dlaswp_t *dlaswp
     dlauum_t *dlauum
     dpbsv_t *dpbsv
@@ -257,9 +249,6 @@ cdef:
     dtrsyl_t *dtrsyl
     dtrtri_t *dtrtri
     dtrtrs_t *dtrtrs
-    dungqr_t *dungqr
-    dungrq_t *dungrq
-    dunmqr_t *dunmqr
     sgbsv_t *sgbsv
     sgbtrf_t *sgbtrf
     sgbtrs_t *sgbtrs
@@ -279,14 +268,6 @@ cdef:
     sgetrs_t *sgetrs
     # cdef *sgges_t
     sggev_t *sggev
-    shbevd_t *shbevd
-    shbevx_t *shbevx
-    sheev_t *sheev
-    sheevd_t *sheevd
-    sheevr_t *sheevr
-    shegv_t *shegv
-    shegvd_t *shegvd
-    shegvx_t *shegvx
     slaswp_t *slaswp
     slauum_t *slauum
     spbsv_t *spbsv
@@ -299,9 +280,6 @@ cdef:
     strsyl_t *strsyl
     strtri_t *strtri
     strtrs_t *strtrs
-    sungqr_t *sungqr
-    sungrq_t *sungrq
-    sunmqr_t *sunmqr
     zgbsv_t *zgbsv
     zgbtrf_t *zgbtrf
     zgbtrs_t *zgbtrs
