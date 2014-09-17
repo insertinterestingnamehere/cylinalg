@@ -1,8 +1,6 @@
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
-from numpy import get_include
-from os import getcwd
 
 ext_modules = [Extension("scipy_blas",["cylinalg/scipy_blas.pyx"],include_dirs=['cylinalg']),
                Extension("scipy_lapack", ["cylinalg/scipy_lapack.pyx"], include_dirs=['cylinalg']),
