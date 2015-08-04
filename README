@@ -1,3 +1,7 @@
-Cython files allowing acces to the optimized BLAS routines available in scipy.linalg. Currently experimental.
+Cython files allowing acces to the optimized BLAS routines available in scipy.linalg.
 
-Licensed under the 3-clause BSD license.
+There is now a new and much improved version of this code included in SciPy 0.16.
+The version there corrects many of the typos in the declarations here and provides Cython wrappers for the vast majority of the routines available in BLAS and LAPACK.
+Users are encouraged to use the interface provided there instead.
+
+Licensed under the 2-clause BSD license.
